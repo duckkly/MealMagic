@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MealMagic - AI-Powered Recipe Suggestions</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="Enter ingredients you have and get smart, personalized recipes with steps — powered by AI!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/logo.png" alt="MealMagic Logo" class="logo">
+            <p class="tagline">Turn your ingredients into delicious meals with AI</p>
+        </header>
+
+        <main>
+            <section class="chat-section">
+                <div id="chat-container" class="chat-container">
+                    <!-- Initial AI greeting message will be inserted here -->
+                </div>
+                <div id="error" class="error hidden" role="alert"></div>
+                <div id="loading" class="loading hidden">
+                    <div class="typing-indicator">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <form id="chat-form" class="chat-input-form">
+                    <input 
+                        type="text" 
+                        id="user-input" 
+                        name="user-input" 
+                        placeholder="Tell me what ingredients you have..." 
+                        required 
+                        aria-required="true"
+                        autocomplete="off"
+                    >
+                    <button type="submit" class="submit-btn" aria-label="Send message">
+                        <span class="btn-text">Send</span>
+                        <span class="loading-spinner hidden"></span>
+                    </button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 MealMagic. Powered by AI.</p>
+        </footer>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
